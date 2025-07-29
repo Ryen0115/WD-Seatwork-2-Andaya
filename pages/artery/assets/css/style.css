@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f5f5f5;
+  overflow-x: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Floating particles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 0, 0, 0.5) 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: floatParticles 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatParticles {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.container {
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.glitch {
+  font-size: 4em;
+  color: red;
+  position: relative;
+  animation: flicker 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: red;
+  z-index: -1;
+}
+
+.glitch::before {
+  top: -2px;
+  animation: glitchTop 2s infinite;
+}
+
+.glitch::after {
+  top: 2px;
+  animation: glitchBottom 1.5s infinite;
+}
+
+.back-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.content-frame {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.artery-image img {
+  width: 350px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+}
+
+.artery-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px red;
+}
+
+.artery-details {
+  max-width: 600px;
+}
+
+.quote {
+  font-style: italic;
+  color: #ff4d4d;
+  font-size: 1.2em;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: red;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+
+h2 {
+  color: #ff6666;
+}
+
+.story {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.loadout {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+  color: #eee;
+}
+
+.loadout li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Animations */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitchTop {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(0); }
+  20% { transform: translate(1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.fade-down {
+  animation: slideDown 1s ease forwards;
+  opacity: 0;
+}
+
+.slide-in {
+  animation: slideRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

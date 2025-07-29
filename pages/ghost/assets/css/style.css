@@ -1,0 +1,183 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Background & Body === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #1a1a1a, #3a3a3a);
+  color: #ddd;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* === Container Layout === */
+.container {
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.operator-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* === Operator Image === */
+.operator-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.operator-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* === Info Section === */
+.info-section {
+  max-width: 600px;
+}
+
+/* === Title === */
+.operator-name {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* === GHOST TITLE CUSTOM === */
+.ghost-title {
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  animation: flickerGhost 1.5s infinite alternate;
+}
+
+@keyframes flickerGhost {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 10px #888;
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #999, 0 0 20px #555;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #ccc, 0 0 18px #aaa;
+  }
+}
+
+/* === Quote === */
+.operator-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* === Sections === */
+.operator-lore,
+.operator-loadout {
+  margin-top: 20px;
+}
+
+.operator-lore h2,
+.operator-loadout h2 {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.operator-lore p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.operator-loadout ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.operator-loadout li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === Floating Particles === */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.05);
+  animation: floatGhost 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.particle1 {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  left: 10%;
+}
+
+.particle2 {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 70%;
+}
+
+.particle3 {
+  width: 30px;
+  height: 30px;
+  top: 80%;
+  left: 30%;
+}
+
+@keyframes floatGhost {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .operator-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-section {
+    max-width: 100%;
+  }
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  color: #999;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  z-index: 1000; /* optional: ensures it's above other elements */
+}
+
+.back-button:hover {
+  color: #fff;
+  background: #333;
+  border-color: #888;
+}
