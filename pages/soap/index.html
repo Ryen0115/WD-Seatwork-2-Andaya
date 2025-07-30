@@ -7,40 +7,187 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="parallax-bg"></div>
-  <a href="../../index.html" class="back-button">← Back</a>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1>CODM Operators</h1>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../ghost/index.html">Ghost</a></li>
+      <li><a href="#" class="active">Soap</a></li>
+      <li><a href="../artery/index.html">Artery</a></li>
+      <li><a href="../roze/index.html">Roze</a></li>
+      <li><a href="../price/index.html">Captain Price</a></li>
+    </ul>
+  </nav>
 
-  <header class="operator-header">
-    <h1 class="operator-name">Soap</h1>
-    <div class="military-stamp">Task Force 141</div>
-  </header>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Tech Header -->
+    <section class="tech-header">
+      <div class="header-grid">
+        <div class="grid-line horizontal top"></div>
+        <div class="grid-line horizontal bottom"></div>
+        <div class="grid-line vertical left"></div>
+        <div class="grid-line vertical right"></div>
+        
+        <div class="operator-id">
+          <div class="id-code">OP-141-002</div>
+          <h1 class="operator-name">SOAP</h1>
+          <div class="real-name">John MacTavish</div>
+          
+          <div class="status-indicator">
+            <div class="status-light active"></div>
+            <span>ACTIVE DEPLOYMENT</span>
+          </div>
+        </div>
+        
+        <div class="unit-badge">
+          <div class="badge-outline">
+            <span class="unit-text">TASK FORCE 141</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <main class="operator-container">
-    <div class="operator-img-wrapper">
-      <img src="assets/img/soap.jpg" alt="Soap Operator" class="operator-img glow-blue" />
-    </div>
-    <div class="operator-details">
-      <blockquote class="operator-quote">"They call me Soap. It's a long story."</blockquote>
-      
-      <section class="operator-story">
-        <h2>Background</h2>
-        <p>
-          John "Soap" MacTavish is a skilled demolitions and close-quarters combat specialist serving in Task Force 141. Known for his mohawk, Scottish heritage, and fearless demeanor, Soap is one of the most trusted operatives in the field.
-        </p>
+    <!-- Main Content Grid -->
+    <div class="content-grid">
+      <!-- Tactical Display Panel -->
+      <section class="tactical-panel">
+        <div class="panel-header">
+          <h2>TACTICAL PROFILE</h2>
+          <div class="panel-status">ONLINE</div>
+        </div>
+        
+        <div class="operator-visual">
+          <div class="image-container">
+            <img src="assets/img/soap.jpg" alt="Soap Operator" class="operator-img"/>
+            <div class="scan-lines"></div>
+            <div class="corner-brackets">
+              <div class="bracket top-left"></div>
+              <div class="bracket top-right"></div>
+              <div class="bracket bottom-left"></div>
+              <div class="bracket bottom-right"></div>
+            </div>
+          </div>
+          
+          <div class="tactical-stats">
+            <div class="stat-row">
+              <span class="stat-label">SPECIALIZATION</span>
+              <span class="stat-value">CQB / DEMOLITIONS</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">ORIGIN</span>
+              <span class="stat-value">SCOTLAND</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">EXPERIENCE</span>
+              <span class="stat-value">VETERAN</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">CLEARANCE</span>
+              <span class="stat-value">LEVEL 7</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="operator-loadout">
-        <h2>Loadout</h2>
-        <ul>
-          <li>M4 - Standard Issue Assault Rifle</li>
-          <li>Combat Knife - Custom Engraved</li>
-          <li>Flashbangs & Semtex Grenades</li>
-          <li>Heavy Tactical Armor</li>
-        </ul>
+      <!-- Data Screens -->
+      <section class="data-screens">
+        <!-- Quote Terminal -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="control minimize"></span>
+              <span class="control maximize"></span>
+              <span class="control close"></span>
+            </div>
+            <span class="terminal-title">PERSONAL_LOG.txt</span>
+          </div>
+          <div class="terminal-content">
+            <div class="terminal-prompt">operator@tf141:~$</div>
+            <div class="quote-text">"They call me Soap. It's a long story."</div>
+            <div class="cursor-blink">_</div>
+          </div>
+        </div>
+
+        <!-- Intel Brief -->
+        <div class="intel-brief">
+          <div class="brief-header">
+            <div class="header-line"></div>
+            <h3>INTELLIGENCE BRIEFING</h3>
+            <div class="classification-stamp">CLASSIFIED</div>
+          </div>
+          
+          <div class="brief-body">
+            <div class="section-marker">BACKGROUND</div>
+            <p>John "Soap" MacTavish is a skilled demolitions and close-quarters combat specialist serving in Task Force 141. Known for his mohawk, Scottish heritage, and fearless demeanor, Soap is one of the most trusted operatives in the field.</p>
+          </div>
+        </div>
+
+        <!-- Loadout Matrix -->
+        <div class="loadout-matrix">
+          <div class="matrix-header">
+            <h3>EQUIPMENT MATRIX</h3>
+            <div class="sync-indicator">
+              <div class="sync-dot"></div>
+              <span>SYNCHRONIZED</span>
+            </div>
+          </div>
+          
+          <div class="equipment-grid">
+            <div class="equipment-slot primary">
+              <div class="slot-icon">🔫</div>
+              <div class="slot-info">
+                <div class="item-name">M4 CARBINE</div>
+                <div class="item-desc">Standard Issue Assault Rifle</div>
+              </div>
+              <div class="slot-status ready"></div>
+            </div>
+            
+            <div class="equipment-slot secondary">
+              <div class="slot-icon">🗡️</div>
+              <div class="slot-info">
+                <div class="item-name">COMBAT KNIFE</div>
+                <div class="item-desc">Custom Engraved</div>
+              </div>
+              <div class="slot-status ready"></div>
+            </div>
+            
+            <div class="equipment-slot tactical">
+              <div class="slot-icon">💥</div>
+              <div class="slot-info">
+                <div class="item-name">EXPLOSIVES</div>
+                <div class="item-desc">Flashbangs & Semtex</div>
+              </div>
+              <div class="slot-status ready"></div>
+            </div>
+            
+            <div class="equipment-slot armor">
+              <div class="slot-icon">🛡️</div>
+              <div class="slot-info">
+                <div class="item-name">TACTICAL ARMOR</div>
+                <div class="item-desc">Heavy Protection</div>
+              </div>
+              <div class="slot-status ready"></div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
 
-  <script src="assets/js/script.js"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-line"></div>
+    <p>Ryen Jevs Andaya | TC05</p>
+  </footer>
+
+  <!-- Tech Background -->
+  <div class="tech-grid"></div>
+  <div class="floating-circuits">
+    <div class="circuit circuit-1"></div>
+    <div class="circuit circuit-2"></div>
+    <div class="circuit circuit-3"></div>
+  </div>
 </body>
 </html>
