@@ -2,41 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artery - CODM Operator</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .layout-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .operator-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 2rem;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      margin-top: 2rem;
+    }
+
+    .operator-card h1,
+    .operator-card .quote {
+      text-align: center;
+    }
+
+    .operator-card h1.glitch {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .operator-card .quote {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .operator-card .content-frame {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="parallax-bg"></div>
 
-  <div class="container">
-    <header class="fade-down">
+  <!-- Shared Header -->
+  <header class="layout-container">
+    <nav class="navbar">
+      <h1>CODM Operators</h1>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../ghost/index.html">Ghost</a></li>
+        <li><a href="../soap/index.html">Soap</a></li>
+        <li><a href="../artery/index.html" class="active">Artery</a></li>
+        <li><a href="../roze/index.html">Roze</a></li>
+        <li><a href="../price/index.html">Captain Price</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="layout-container">
+    <div class="parallax-bg"></div>
+
+    <!-- Combined Operator Card -->
+    <section class="operator-card fade-in">
       <h1 class="glitch" data-text="Artery">Artery</h1>
-      <a href="../../index.html" class="back-link">← Back to Home</a>
-    </header>
+      <p class="quote">“Death walks among you.”</p>
 
-    <section class="content-frame">
-      <div class="artery-image fade-in">
-        <img src="assets/img/artery.jpg" alt="Artery Operator"/>
-      </div>
-      <div class="artery-details slide-in">
-        <p class="quote">“Death walks among you.”</p>
-        <hr class="divider"/>
-        <h2>Background</h2>
-        <p class="story">
-          Artery, a lethal and mysterious operator, specializes in stealth infiltration and high-risk missions. Raised in harsh conditions and trained by elite forces, she became a ghost in the battlefield—silent but devastating.
-          <br/><br/>
-          Her crimson gear symbolizes both danger and vengeance. Few know her real name; fewer have lived to tell the tale.
-        </p>
-        <h2>Loadout</h2>
-        <ul class="loadout">
-          <li>Primary: Dlq – Red Sprite Camo</li>
-          <li>Secondary: .50 GS – Bloodline</li>
-          <li>Lethal: Contact Grenade</li>
-          <li>Tactical: Flash Grenade</li>
-        </ul>
+      <div class="content-frame">
+        <div class="artery-image">
+          <img src="assets/img/artery.jpg" alt="Artery Operator" style="max-width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="artery-details">
+          <h2>Background</h2>
+          <p class="story">
+            Artery, a lethal and mysterious operator, specializes in stealth infiltration and high-risk missions. Raised in harsh conditions and trained by elite forces, she became a ghost in the battlefield—silent but devastating.
+            <br /><br />
+            Her crimson gear symbolizes both danger and vengeance. Few know her real name; fewer have lived to tell the tale.
+          </p>
+
+          <h2>Loadout</h2>
+          <ul class="loadout">
+            <li>Primary: Dlq – Red Sprite Camo</li>
+            <li>Secondary: .50 GS – Bloodline</li>
+            <li>Lethal: Contact Grenade</li>
+            <li>Tactical: Flash Grenade</li>
+          </ul>
+        </div>
       </div>
     </section>
+  </main>
+
+<footer>
+  <div class="container">
+    <p>Ryen Jevs Andaya | TC05</p>
   </div>
+</footer>
+
+
+  <script src="../../assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

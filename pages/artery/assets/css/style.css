@@ -32,10 +32,11 @@ body::before {
 }
 
 .container {
-  padding: 40px;
+  padding: 15px;
   position: relative;
   z-index: 2;
 }
+
 
 header {
   text-align: center;
@@ -208,4 +209,20 @@ h2 {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+footer {
+  background-color: #781515;
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #ccc;
+  text-align: left;
+  border-top: 1px solid rgb(134, 82, 82);
+  position: relative;
+  z-index: 2;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
