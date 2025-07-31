@@ -8,34 +8,32 @@
 /* === Background & Body === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1a1a0f 0%, #2d2d1a 50%, #3a3a2a 100%);
-  color: #e0e0e0;
-  overflow-x: hidden;
-  position: relative;
+  background: #1a1a1a;
+  color: #e5e5e5;
+  line-height: 1.6;
   min-height: 100vh;
 }
 
-/* === Navbar (matching other pages) === */
+/* === Navbar === */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  border-bottom: 1px solid #333;
 }
 
 .navbar h1 {
-  color: #00ffff;
+  color: #4a9eff;
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .navbar ul {
@@ -45,323 +43,242 @@ body {
 }
 
 .navbar a {
-  color: #ddd;
+  color: #ccc;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #00ffff;
-  background: rgba(0, 255, 255, 0.1);
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  color: #4a9eff;
+  background: rgba(74, 158, 255, 0.1);
 }
 
 /* === Main Content === */
 .main-content {
   margin-top: 80px;
+  padding: 2rem;
 }
 
-/* === Hero Banner === */
-.hero-banner {
-  height: 40vh;
-  background: linear-gradient(45deg, rgba(85, 107, 47, 0.3), rgba(107, 142, 35, 0.3)),
-              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="military" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="none" stroke="rgba(154,205,50,0.1)" stroke-width="0.5"/><circle cx="10" cy="10" r="1" fill="rgba(154,205,50,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23military)"/></svg>');
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(85,107,47,0.4));
-}
-
-.hero-content {
+/* === Hero Section === */
+.hero-section {
   text-align: center;
-  z-index: 2;
-  position: relative;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  border: 1px solid #333;
 }
 
-.rank-insignia {
+.rank-badge {
+  display: inline-block;
+  background: #4a9eff;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
 }
 
-.rank-text {
-  background: linear-gradient(45deg, #9acd32, #6b8e23);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
 .operator-name {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
-  color: #cfcfcf;
-  text-shadow: 3px 3px 0 #556b2f, 6px 6px 10px rgba(0,0,0,0.5);
-  letter-spacing: 8px;
+  color: #ffffff;
   margin: 1rem 0;
-  animation: militaryGlow 3s ease-in-out infinite alternate;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-@keyframes militaryGlow {
-  0% { text-shadow: 3px 3px 0 #556b2f, 6px 6px 10px rgba(0,0,0,0.5); }
-  100% { text-shadow: 3px 3px 0 #6b8e23, 6px 6px 20px rgba(107,142,35,0.4); }
-}
-
-.service-branch {
-  font-size: 1rem;
-  color: #9acd32;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-/* === Content Container === */
-.content-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-  max-width: 1400px;
-  margin: 3rem auto;
-  padding: 0 2rem;
-}
-
-/* === Operator Profile (Left Column) === */
-.profile-card {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid #556b2f;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.profile-header {
-  background: linear-gradient(135deg, #556b2f, #6b8e23);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.profile-header h3 {
-  color: white;
-  font-weight: 700;
+.service-info {
+  color: #888;
+  font-size: 1.1rem;
   letter-spacing: 1px;
 }
 
-.classification {
-  background: #ff4444;
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 700;
+/* === Content Layout === */
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.profile-image {
-  position: relative;
+/* === Center Image === */
+.center-image {
+  position: sticky;
+  top: 100px;
+}
+
+.image-container {
+  background: #2a2a2a;
+  border-radius: 16px;
   padding: 2rem;
+  border: 2px solid #4a9eff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .operator-img {
   width: 100%;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  border: 3px solid #6b8e23;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .operator-img:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 25px rgba(107, 142, 35, 0.6);
 }
 
-.image-frame {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  border: 1px solid rgba(154, 205, 50, 0.3);
+.callsign-badge {
+  text-align: center;
+  margin-top: 1rem;
+  background: #333;
+  padding: 1rem;
   border-radius: 8px;
-  pointer-events: none;
+  border-left: 4px solid #4a9eff;
 }
 
-.operator-stats {
-  padding: 1.5rem;
-  background: rgba(85, 107, 47, 0.1);
+.callsign-label {
+  color: #4a9eff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
-.stat-item {
+.callsign-value {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* === Content Cards === */
+.content-card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.content-card:hover {
+  border-color: #4a9eff;
+  box-shadow: 0 5px 20px rgba(74, 158, 255, 0.1);
+}
+
+.card-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #4a9eff;
+}
+
+.card-title {
+  color: #4a9eff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card-badge {
+  background: #4a9eff;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.classified-badge {
+  background: #ff4757;
+}
+
+.active-badge {
+  background: #2ed573;
+}
+
+/* === Quote Card === */
+.quote-text {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.6;
   margin-bottom: 1rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(154, 205, 50, 0.2);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.quote-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 3rem;
+  color: #4a9eff;
+  opacity: 0.5;
+}
+
+.quote-author {
+  text-align: right;
+  color: #4a9eff;
+  font-weight: 600;
+}
+
+/* === Stats Grid === */
+.stats-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #333;
+  border-radius: 8px;
+  border-left: 4px solid #4a9eff;
 }
 
 .stat-label {
-  color: #9acd32;
+  color: #4a9eff;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
 .stat-value {
-  color: #cfcfcf;
+  color: #fff;
   font-weight: 500;
 }
 
-/* === Operator Details (Right Column) === */
-.operator-details {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* === Quote Section === */
-.quote-section {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-left: 4px solid #6b8e23;
-  border-radius: 0 12px 12px 0;
-  position: relative;
-}
-
-.quote-mark {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 4rem;
-  color: #9acd32;
-  opacity: 0.3;
-}
-
-.operator-quote {
-  font-style: italic;
-  font-size: 1.4rem;
-  color: #cfcfcf;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.quote-attribution {
-  text-align: right;
-  color: #9acd32;
-  font-weight: 600;
-}
-
-/* === Mission Brief === */
-.mission-brief {
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #556b2f;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.brief-header {
-  background: linear-gradient(135deg, #3a3a2a, #556b2f);
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brief-header h2 {
-  color: white;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-
-.security-clearance {
-  background: #9acd32;
-  color: #0d0d0d;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.brief-content {
-  padding: 2rem;
-}
-
-.brief-content h3 {
-  color: #9acd32;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.brief-content p {
-  line-height: 1.8;
-  color: #d0d0d0;
-  font-size: 1.1rem;
-}
-
-/* === Loadout Section === */
-.loadout-section {
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #556b2f;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.loadout-header {
-  background: linear-gradient(135deg, #556b2f, #9acd32);
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.loadout-header h2 {
-  color: white;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-
-.loadout-status {
-  background: #00ff00;
-  color: #000;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
+/* === Weapon Grid === */
 .weapon-grid {
-  padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
 .weapon-item {
-  background: rgba(85, 107, 47, 0.1);
+  background: #333;
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(154, 205, 50, 0.2);
+  border-left: 4px solid #4a9eff;
   transition: all 0.3s ease;
 }
 
 .weapon-item:hover {
-  background: rgba(85, 107, 47, 0.2);
-  border-color: #9acd32;
-  transform: translateY(-2px);
+  background: #3a3a3a;
+  transform: translateX(5px);
 }
 
 .weapon-category {
-  color: #9acd32;
+  color: #4a9eff;
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -369,106 +286,50 @@ body {
 }
 
 .weapon-name {
-  color: #cfcfcf;
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
-.weapon-attachments {
+.weapon-details {
   color: #aaa;
   font-size: 0.9rem;
 }
 
+/* === Background Info === */
+.background-text {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
 /* === Footer === */
 .site-footer {
-  background: rgba(0, 0, 0, 0.9);
-  border-top: 2px solid #556b2f;
+  background: #1f1f1f;
+  border-top: 2px solid #4a9eff;
   padding: 2rem;
   text-align: center;
   margin-top: 4rem;
 }
 
 .site-footer p {
-  color: #9acd32;
+  color: #4a9eff;
   font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 1px;
-}
-
-/* === Background Elements === */
-.military-grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="militaryGrid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(154,205,50,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23militaryGrid)"/></svg>');
-  z-index: -1;
-  opacity: 0.4;
-}
-
-.floating-elements {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.element {
-  position: absolute;
-  background: radial-gradient(circle, rgba(154,205,50,0.1), transparent);
-  border-radius: 50%;
-  animation: militaryFloat 12s infinite ease-in-out;
-}
-
-.element-1 {
-  width: 100px;
-  height: 100px;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.element-2 {
-  width: 80px;
-  height: 80px;
-  top: 70%;
-  right: 15%;
-  animation-delay: 4s;
-}
-
-.element-3 {
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  left: 70%;
-  animation-delay: 8s;
-}
-
-@keyframes militaryFloat {
-  0%, 100% { 
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.2;
-  }
-  50% { 
-    transform: translateY(-40px) rotate(180deg);
-    opacity: 0.4;
-  }
 }
 
 /* === Responsive Design === */
-@media (max-width: 1024px) {
-  .content-container {
+@media (max-width: 1200px) {
+  .content-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
-  .weapon-grid {
-    grid-template-columns: 1fr;
+
+  .center-image {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -487,36 +348,32 @@ body {
 
   .main-content {
     margin-top: 120px;
+    padding: 1rem;
   }
 
   .operator-name {
-    font-size: 3rem;
-    letter-spacing: 4px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
   }
 
-  .hero-banner {
-    height: 30vh;
-  }
-
-  .content-container {
-    padding: 0 1rem;
+  .content-card {
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .operator-name {
     font-size: 2rem;
-    letter-spacing: 2px;
   }
 
-  .navbar a {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
+  .quote-text {
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
   }
 
-  .quote-section,
-  .brief-content,
-  .weapon-grid {
-    padding: 1rem;
+  .stat-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }

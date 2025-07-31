@@ -22,110 +22,142 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="rank-insignia">
-          <span class="rank-text">CAPTAIN</span>
-        </div>
-        <h1 class="operator-name">PRICE</h1>
-        <div class="service-branch">
-          <span>22nd SAS Regiment</span>
-        </div>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="rank-badge">CAPTAIN</div>
+      <h1 class="operator-name">PRICE</h1>
+      <div class="service-info">22nd SAS Regiment</div>
     </section>
 
-    <!-- Main Content Grid -->
-    <div class="content-container">
-      <!-- Left Column - Image & Stats -->
-      <aside class="operator-profile">
-        <div class="profile-card">
-          <div class="profile-header">
-            <h3>OPERATOR FILE</h3>
-            <div class="classification">CLASSIFIED</div>
+    <!-- Content Layout -->
+    <div class="content-layout">
+      <!-- Left Column -->
+      <div class="left-content">
+        <!-- Quote Card -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">FAMOUS QUOTE</h2>
           </div>
-          
-          <div class="profile-image">
-            <img src="assets/img/price.jpg" alt="Captain Price" class="operator-img"/>
-            <div class="image-frame"></div>
+          <div class="quote-text">
+            This is for the record — history is written by the victor.
           </div>
-          
-          <div class="operator-stats">
-            <div class="stat-item">
-              <span class="stat-label">CALLSIGN</span>
-              <span class="stat-value">Bravo Six</span>
-            </div>
-            <div class="stat-item">
+          <div class="quote-author">- Captain John Price</div>
+        </div>
+
+        <!-- Personnel Stats -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">PERSONNEL DATA</h2>
+            <span class="card-badge classified-badge">CLASSIFIED</span>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-row">
               <span class="stat-label">UNIT</span>
               <span class="stat-value">Task Force 141</span>
             </div>
-            <div class="stat-item">
+            <div class="stat-row">
               <span class="stat-label">SPECIALIZATION</span>
               <span class="stat-value">Leadership & Tactics</span>
             </div>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Right Column - Details -->
-      <section class="operator-details">
-        <!-- Quote Section -->
-        <div class="quote-section">
-          <div class="quote-mark">"</div>
-          <blockquote class="operator-quote">
-            This is for the record — history is written by the victor.
-          </blockquote>
-          <div class="quote-attribution">- Captain John Price</div>
-        </div>
-
-        <!-- Mission Brief Style Background -->
-        <div class="mission-brief">
-          <div class="brief-header">
-            <h2>PERSONNEL FILE</h2>
-            <div class="security-clearance">TOP SECRET</div>
-          </div>
-          
-          <div class="brief-content">
-            <h3>Background</h3>
-            <p>Captain John Price is a legendary British SAS operator known for his sharp tactics, gritty leadership, and unwavering loyalty. From covert raids to high-risk extraction missions, he stands at the forefront of the most classified military operations in the world. Calm under pressure and lethal on the battlefield, Price is the backbone of Task Force 141.</p>
+            <div class="stat-row">
+              <span class="stat-label">RANK</span>
+              <span class="stat-value">Captain</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">SERVICE</span>
+              <span class="stat-value">22nd SAS Regiment</span>
+            </div>
           </div>
         </div>
 
-        <!-- Loadout Section -->
-        <div class="loadout-section">
-          <div class="loadout-header">
-            <h2>SIGNATURE LOADOUT</h2>
-            <div class="loadout-status">ACTIVE</div>
+        <!-- Background Info -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">BACKGROUND</h2>
+            <span class="card-badge">TOP SECRET</span>
           </div>
-          
+          <div class="background-text">
+            Captain John Price is a legendary British SAS operator known for his sharp tactics, gritty leadership, and unwavering loyalty. From covert raids to high-risk extraction missions, he stands at the forefront of the most classified military operations in the world.
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Image -->
+      <div class="center-image">
+        <div class="image-container">
+          <img src="assets/img/price.jpg" alt="Captain Price" class="operator-img"/>
+          <div class="callsign-badge">
+            <div class="callsign-label">CALLSIGN</div>
+            <div class="callsign-value">BRAVO SIX</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-content">
+        <!-- Primary Loadout -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">PRIMARY LOADOUT</h2>
+            <span class="card-badge active-badge">ACTIVE</span>
+          </div>
           <div class="weapon-grid">
-            <div class="weapon-item primary">
-              <div class="weapon-category">PRIMARY</div>
+            <div class="weapon-item">
+              <div class="weapon-category">PRIMARY WEAPON</div>
               <div class="weapon-name">M13 Assault Rifle</div>
-              <div class="weapon-attachments">Tactical Grip + Holographic Sight</div>
+              <div class="weapon-details">Tactical Grip + Holographic Sight</div>
             </div>
-            
-            <div class="weapon-item secondary">
-              <div class="weapon-category">SECONDARY</div>
+            <div class="weapon-item">
+              <div class="weapon-category">SECONDARY WEAPON</div>
               <div class="weapon-name">.50 GS Desert Eagle</div>
-              <div class="weapon-attachments">High-Caliber Rounds</div>
-            </div>
-            
-            <div class="weapon-item equipment">
-              <div class="weapon-category">EQUIPMENT</div>
-              <div class="weapon-name">Flash Grenade, Thermite</div>
-              <div class="weapon-attachments">Tactical Deployment</div>
-            </div>
-            
-            <div class="weapon-item perks">
-              <div class="weapon-category">PERKS</div>
-              <div class="weapon-name">Hardline, Quick Fix, Ghost</div>
-              <div class="weapon-attachments">Combat Enhancement</div>
+              <div class="weapon-details">High-Caliber Rounds</div>
             </div>
           </div>
         </div>
-      </section>
+
+        <!-- Equipment -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">EQUIPMENT</h2>
+          </div>
+          <div class="weapon-grid">
+            <div class="weapon-item">
+              <div class="weapon-category">TACTICAL</div>
+              <div class="weapon-name">Flash Grenade</div>
+              <div class="weapon-details">Crowd Control</div>
+            </div>
+            <div class="weapon-item">
+              <div class="weapon-category">LETHAL</div>
+              <div class="weapon-name">Thermite</div>
+              <div class="weapon-details">Area Denial</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Perks -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2 class="card-title">PERKS</h2>
+          </div>
+          <div class="weapon-grid">
+            <div class="weapon-item">
+              <div class="weapon-category">PERK 1</div>
+              <div class="weapon-name">Hardline</div>
+              <div class="weapon-details">Reduced Scorestreak Cost</div>
+            </div>
+            <div class="weapon-item">
+              <div class="weapon-category">PERK 2</div>
+              <div class="weapon-name">Quick Fix</div>
+              <div class="weapon-details">Health Regeneration</div>
+            </div>
+            <div class="weapon-item">
+              <div class="weapon-category">PERK 3</div>
+              <div class="weapon-name">Ghost</div>
+              <div class="weapon-details">Stealth Operations</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -133,13 +165,5 @@
   <footer class="site-footer">
     <p>Ryen Jevs Andaya | TC05</p>
   </footer>
-
-  <!-- Background Elements -->
-  <div class="military-grid"></div>
-  <div class="floating-elements">
-    <div class="element element-1"></div>
-    <div class="element element-2"></div>
-    <div class="element element-3"></div>
-  </div>
 </body>
 </html>
