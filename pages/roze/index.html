@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Navigation Bar (Soap Style) -->
+  <!-- Navigation Bar (Consistent) -->
   <nav class="navbar">
     <h1>CODM Operators</h1>
     <ul>
@@ -20,222 +20,197 @@
     </ul>
   </nav>
 
+  <!-- Parallax Background -->
+  <div class="parallax-bg"></div>
+  <canvas id="particles"></canvas>
+
   <!-- Main Content -->
   <main class="main-content">
-    <!-- Tech Header -->
-    <section class="tech-header">
-      <div class="header-grid">
-        <div class="grid-line horizontal top"></div>
-        <div class="grid-line horizontal bottom"></div>
-        <div class="grid-line vertical left"></div>
-        <div class="grid-line vertical right"></div>
-        
-        <div class="operator-id">
-          <div class="id-code">OP-SHD-001</div>
-          <h1 class="operator-name">ROZE</h1>
-          <div class="real-name">Rozlin Helms</div>
-          
-          <div class="status-indicator">
-            <div class="status-light active"></div>
-            <span>SHADOW DEPLOYMENT</span>
-          </div>
+    <!-- Shadow Operative Header -->
+    <section class="shadow-title">
+      <div class="title-container">
+        <div class="shadow-designation">
+          <span class="operative-code">SC-ALPHA-001</span>
+          <h1 class="operative-name">ROZE</h1>
+          <span class="operative-alias">Rozlin Helms</span>
         </div>
-        
-        <div class="unit-badge">
-          <div class="badge-outline">
-            <span class="unit-text">SHADOW COMPANY</span>
+        <div class="stealth-status">
+          <div class="status-bars">
+            <div class="status-bar"></div>
+            <div class="status-bar"></div>
+            <div class="status-bar"></div>
           </div>
+          <span class="status-text">SHADOW MODE</span>
         </div>
       </div>
     </section>
 
-    <!-- Main Content Grid -->
-    <div class="content-grid">
-      <!-- Tactical Display Panel -->
-      <section class="tactical-panel">
-        <div class="panel-header">
-          <h2>SHADOW PROFILE</h2>
-          <div class="panel-status">STEALTH</div>
+    <!-- Main Layout: Content Left, Image Right -->
+    <div class="shadow-layout">
+      <!-- Left: Content Panel -->
+      <section class="content-panel">
+        <!-- Encrypted Quote -->
+        <div class="encrypted-quote">
+          <div class="decrypt-header">
+            <span class="decrypt-icon">🔓</span>
+            <span class="decrypt-status">DECRYPTED MESSAGE</span>
+            <div class="security-level">LEVEL 9</div>
+          </div>
+          <div class="quote-container">
+            <p class="shadow-quote">"You hide in darkness long enough... it becomes home."</p>
+            <div class="quote-signature">- ROZE</div>
+          </div>
         </div>
-        
-        <div class="operator-visual">
-          <div class="image-container">
-            <img src="assets/img/roze.jpg" alt="Roze Operator" class="operator-img"/>
-            <div class="scan-lines"></div>
-            <div class="shadow-overlay"></div>
-            <div class="corner-brackets">
-              <div class="bracket top-left"></div>
-              <div class="bracket top-right"></div>
-              <div class="bracket bottom-left"></div>
-              <div class="bracket bottom-right"></div>
+
+        <!-- Psychological Profile -->
+        <div class="psych-profile">
+          <div class="profile-header">
+            <div class="header-icon">🧠</div>
+            <h2>PSYCHOLOGICAL ASSESSMENT</h2>
+            <div class="classification">CLASSIFIED</div>
+          </div>
+          <div class="profile-content">
+            <div class="trait-analysis">
+              <div class="trait-item">
+                <span class="trait-label">ADAPTABILITY</span>
+                <div class="trait-meter">
+                  <div class="trait-fill" style="width: 95%"></div>
+                </div>
+                <span class="trait-score">95%</span>
+              </div>
+              <div class="trait-item">
+                <span class="trait-label">STEALTH MASTERY</span>
+                <div class="trait-meter">
+                  <div class="trait-fill" style="width: 98%"></div>
+                </div>
+                <span class="trait-score">98%</span>
+              </div>
+              <div class="trait-item">
+                <span class="trait-label">LETHALITY</span>
+                <div class="trait-meter">
+                  <div class="trait-fill" style="width: 87%"></div>
+                </div>
+                <span class="trait-score">87%</span>
+              </div>
             </div>
           </div>
-          
-          <div class="tactical-stats">
-            <div class="stat-row">
-              <span class="stat-label">SPECIALIZATION</span>
-              <span class="stat-value">STEALTH / INFILTRATION</span>
+        </div>
+
+        <!-- Shadow Company Intel -->
+        <div class="shadow-intel">
+          <div class="intel-header">
+            <div class="intel-stamp">TOP SECRET</div>
+            <h2>SHADOW COMPANY DOSSIER</h2>
+          </div>
+          <div class="intel-body">
+            <div class="intel-section">
+              <h3>BACKGROUND</h3>
+              <p>Rozlin "Roze" Helms is a ruthless and highly trained shadow operative. Once part of the US Army's elite unit, she went rogue and joined Shadow Company to serve her own sense of order and control. Highly tactical, she thrives in dark environments, using silence, stealth, and fear as weapons.</p>
             </div>
-            <div class="stat-row">
-              <span class="stat-label">ORIGIN</span>
-              <span class="stat-value">CLASSIFIED</span>
+            <div class="intel-tags">
+              <span class="tag origin">ORIGIN: USA</span>
+              <span class="tag status">STATUS: ACTIVE</span>
+              <span class="tag clearance">CLEARANCE: OMEGA</span>
             </div>
-            <div class="stat-row">
-              <span class="stat-label">EXPERIENCE</span>
-              <span class="stat-value">ELITE</span>
+          </div>
+        </div>
+
+        <!-- Loadout Arsenal -->
+        <div class="shadow-arsenal">
+          <div class="arsenal-header">
+            <div class="arsenal-icon">⚔️</div>
+            <h2>SHADOW ARSENAL</h2>
+            <div class="sync-status">
+              <div class="sync-dot"></div>
+              <span>SYNCED</span>
             </div>
-            <div class="stat-row">
-              <span class="stat-label">CLEARANCE</span>
-              <span class="stat-value">LEVEL 9</span>
+          </div>
+          <div class="weapon-grid">
+            <div class="weapon-card primary">
+              <div class="weapon-type">PRIMARY</div>
+              <div class="weapon-name">CR-56 AMAX</div>
+              <div class="weapon-mod">Stealth Suppressed</div>
+              <div class="weapon-status ready"></div>
+            </div>
+            <div class="weapon-card secondary">
+              <div class="weapon-type">SECONDARY</div>
+              <div class="weapon-name">RENETTI</div>
+              <div class="weapon-mod">Tactical Pistol</div>
+              <div class="weapon-status ready"></div>
+            </div>
+            <div class="weapon-card tactical">
+              <div class="weapon-type">TACTICAL</div>
+              <div class="weapon-name">SMOKE GRENADE</div>
+              <div class="weapon-mod">Concealment</div>
+              <div class="weapon-status ready"></div>
+            </div>
+            <div class="weapon-card lethal">
+              <div class="weapon-type">LETHAL</div>
+              <div class="weapon-name">THROWING KNIFE</div>
+              <div class="weapon-mod">Silent Kill</div>
+              <div class="weapon-status ready"></div>
+            </div>
+            <div class="weapon-card perk">
+              <div class="weapon-type">PERK</div>
+              <div class="weapon-name">DEAD SILENCE</div>
+              <div class="weapon-mod">Ghost Protocol</div>
+              <div class="weapon-status ready"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Data Screens -->
-      <section class="data-screens">
-        <!-- Quote Terminal -->
-        <div class="terminal-window">
-          <div class="terminal-header">
-            <div class="terminal-controls">
-              <span class="control minimize"></span>
-              <span class="control maximize"></span>
-              <span class="control close"></span>
-            </div>
-            <span class="terminal-title">SHADOW_LOG.txt</span>
+      <!-- Right: Image Panel -->
+      <section class="image-panel">
+        <div class="shadow-frame">
+          <div class="frame-corners">
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
           </div>
-          <div class="terminal-content">
-            <div class="terminal-prompt">shadow@operative:~$</div>
-            <div class="quote-text">"You hide in darkness long enough... it becomes home."</div>
-            <div class="cursor-blink">_</div>
+          <div class="threat-indicators">
+            <div class="threat high"></div>
+            <div class="threat critical"></div>
+            <div class="threat extreme"></div>
           </div>
+          <img src="assets/img/roze.jpg" alt="Roze Shadow Operative" class="shadow-operative"/>
+          <div class="shadow-overlay"></div>
+          <div class="scan-effect"></div>
         </div>
-
-        <!-- Intel Brief -->
-        <div class="intel-brief">
-          <div class="brief-header">
-            <div class="header-line"></div>
-            <h3>INTELLIGENCE BRIEFING</h3>
-            <div class="classification-stamp">TOP SECRET</div>
+        
+        <div class="operative-stats">
+          <div class="stat-display">
+            <div class="stat-label">SHADOW COMPANY</div>
+            <div class="stat-value">TIER 1 OPERATIVE</div>
           </div>
-          
-          <div class="brief-body">
-            <div class="section-marker">BACKGROUND</div>
-            <p>Rozlin "Roze" Helms is a ruthless and highly trained shadow operative. Once part of the US Army's elite unit, she went rogue and joined Shadow Company to serve her own sense of order and control. Highly tactical, she thrives in dark environments, using silence, stealth, and fear as weapons.</p>
+          <div class="stat-display">
+            <div class="stat-label">SPECIALIZATION</div>
+            <div class="stat-value">STEALTH / INFILTRATION</div>
           </div>
-        </div>
-
-        <!-- Loadout Matrix -->
-        <div class="loadout-matrix">
-          <div class="matrix-header">
-            <h3>STEALTH LOADOUT</h3>
-            <div class="sync-indicator">
-              <div class="sync-dot"></div>
-              <span>SYNCHRONIZED</span>
-            </div>
-          </div>
-          
-          <div class="equipment-grid">
-            <div class="equipment-slot primary">
-              <div class="slot-icon">🔫</div>
-              <div class="slot-info">
-                <div class="item-name">CR-56 AMAX</div>
-                <div class="item-desc">Stealth Suppressed</div>
-              </div>
-              <div class="slot-status ready"></div>
-            </div>
-            
-            <div class="equipment-slot secondary">
-              <div class="slot-icon">🔫</div>
-              <div class="slot-info">
-                <div class="item-name">RENETTI</div>
-                <div class="item-desc">Tactical Pistol</div>
-              </div>
-              <div class="slot-status ready"></div>
-            </div>
-            
-            <div class="equipment-slot tactical">
-              <div class="slot-icon">🗡️</div>
-              <div class="slot-info">
-                <div class="item-name">THROWING KNIFE</div>
-                <div class="item-desc">Silent Elimination</div>
-              </div>
-              <div class="slot-status ready"></div>
-            </div>
-            
-            <div class="equipment-slot armor">
-              <div class="slot-icon">💨</div>
-              <div class="slot-info">
-                <div class="item-name">SMOKE GRENADE</div>
-                <div class="item-desc">Concealment</div>
-              </div>
-              <div class="slot-status ready"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Additional Shadow Skills Panel -->
-        <div class="shadow-skills">
-          <div class="skills-header">
-            <h3>SHADOW ABILITIES</h3>
-            <div class="stealth-indicator">
-              <div class="stealth-bar">
-                <div class="stealth-fill"></div>
-              </div>
-              <span>STEALTH LEVEL: MAX</span>
-            </div>
-          </div>
-          
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-icon">👤</div>
-              <div class="skill-info">
-                <div class="skill-name">DEAD SILENCE</div>
-                <div class="skill-desc">Silent Movement</div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-icon">🌑</div>
-              <div class="skill-info">
-                <div class="skill-name">SHADOW BLEND</div>
-                <div class="skill-desc">Enhanced Camouflage</div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-icon">⚡</div>
-              <div class="skill-info">
-                <div class="skill-name">QUICK STRIKE</div>
-                <div class="skill-desc">Rapid Takedowns</div>
-              </div>
-            </div>
-            
-            <div class="skill-item">
-              <div class="skill-icon">👁️</div>
-              <div class="skill-info">
-                <div class="skill-name">NIGHT VISION</div>
-                <div class="skill-desc">Low-Light Combat</div>
-              </div>
-            </div>
+          <div class="stat-display">
+            <div class="stat-label">DEPLOYMENT</div>
+            <div class="stat-value">ACTIVE MISSION</div>
           </div>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- Footer (Soap Style) -->
+  <!-- Footer (Consistent) -->
   <footer class="site-footer">
     <div class="footer-line"></div>
     <p>Ryen Jevs Andaya | TC05</p>
   </footer>
 
-  <!-- Background Elements -->
-  <div class="shadow-particles"></div>
+  <!-- Shadow Effects -->
   <div class="floating-shadows">
-    <div class="shadow shadow-1"></div>
-    <div class="shadow shadow-2"></div>
-    <div class="shadow shadow-3"></div>
+    <div class="shadow-particle s1"></div>
+    <div class="shadow-particle s2"></div>
+    <div class="shadow-particle s3"></div>
+    <div class="shadow-particle s4"></div>
   </div>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
